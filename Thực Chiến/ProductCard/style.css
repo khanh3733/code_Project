@@ -1,0 +1,137 @@
+body {
+    background-image: linear-gradient(to right, #4daf54, #3d8880);
+}
+
+.card-content{
+    margin: 120px auto;
+    width: 320px;
+    height: 400px;
+    background-color: #272D40;
+    border-radius: 15px;
+    padding: 20px 15px;
+}
+
+.cart-icon {
+    font-size: 22px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.cart-icon i {
+    cursor: pointer;
+}
+
+.cart-img {
+    width: 290px;
+    transition: ease-out 0.3s;
+}
+
+.card-title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: #4DAF54;
+    transition: ease-out 0.3s;
+}
+
+.card-price{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 12px;
+    transition: ease-out 0.3s;
+}
+
+.cart-desc{
+    margin-top: 250px;
+    transition: ease-in 0.3s;
+    opacity: 0;
+}
+
+.size{
+    display: flex;
+    margin-bottom: 20px;
+}
+.size h3{ 
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.size span {
+    padding: 2px 10px;
+    margin: 0 5px;
+    background-color: #dadada;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #272d40;
+    cursor: pointer;
+}
+
+.color{
+    display: flex;
+    margin-bottom: 20px;
+}
+.color h3{ 
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.color span{
+    padding: 12px 12px;
+    margin: 0 5px;
+    border-radius: 100rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.red {
+    background-color: red;
+}
+.green {
+    background-color: green;
+}
+.black{
+    background-color: black;
+}
+
+.btn{
+    padding: 12px 25px;
+    background-color: rgb(77,175,84);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(0.9);
+}
+/* hover */
+
+.card-content:hover .cart-img{
+    transform: translateY(-110px) rotate(-20deg);
+}
+
+.card-content:hover .card-title {
+    transform: translate(-30px, -80px);
+}
+
+.card-content:hover .card-price {
+    transform: translate(-115px, -80px);
+}
+
+.card-content:hover .cart-desc{
+    transform: translate(10px , -270px);
+    opacity: 1;
+}

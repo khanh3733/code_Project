@@ -1,0 +1,94 @@
+body{
+    background-image: linear-gradient( 45deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 50%, rgb(255, 204, 112) 100% );
+    height: 100vh;
+}
+.btnOpen{
+    font-size: 20px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    border: none;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+.btnOpen:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.modal{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 0;
+}
+.hide{
+    display: none;
+}
+.modal__inner{
+    width: 450px;
+    height: 200px;
+    background-color: white;
+    border-radius: 5px;
+    animation: showModal linear .2s;
+    position: absolute;
+    top: 200px;
+}
+.modal--heading{
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(226,110,112);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.modal--heading h3{
+    margin-left: 15px;
+}
+.modal--heading i{
+    margin-right: 15px;
+    cursor: pointer;
+}
+.modal--content{
+    margin: 15px;
+}
+.modal--content h1{
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(226,110,112);
+    margin-bottom: 10px;
+}
+.modal--content h3{
+    font-size: 16px;
+}
+.modal--footer{
+    margin: 15px;
+    float: right;
+}
+.btnClose{
+    padding: 10px 20px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(226,110,112);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+@keyframes showModal {
+    from {
+      top: 0;
+      opacity: 0;
+    }
+    to {
+      top: 200px;
+      opacity: 1;
+    }
+  }

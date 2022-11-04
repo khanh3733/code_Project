@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root{
+    --primaryColor: rgb(10,108,241);
+    --secondaryColor: rgb(77,175,84);
+    --bgSecondColor: #3B3A3B;
+    --bgColor: #2D2C2D;
+}
+.content{
+    background-color: #EEEEEE;
+    height: 100vh;
+}
+header{
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header h1{
+    color: var(--primaryColor);
+}
+.toggle{
+    width: 80px;
+    height: 30px;
+    background-color: #aaaaaa;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+}
+.toggle label{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background-color: white;
+    top: 2px;
+    left: 0;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+main{
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main h2{
+    font-size: 50px;
+    margin-bottom: 30px;
+    color: var(--primaryColor);
+}
+.box {
+    width: 1200px;
+    height: 255px;
+    font-size: 20px;
+    background-color: #dadada;
+    border-radius: 10px;
+    padding: 40px;
+}
+.box-social{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.box-social a{
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #dadada;
+    background-color: var(--primaryColor);
+    border-radius: 10px;
+}
+.animation{
+    transform: translateX(55px);
+}
+.active{
+    background-color: var(--secondaryColor);
+}
+.actived{
+    color: var(--secondaryColor);
+}
+body .bgactive{
+    background-color: var(--bgColor);
+}

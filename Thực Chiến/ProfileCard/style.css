@@ -1,0 +1,84 @@
+
+:root {
+    --primaryColor: #F2726A;
+}
+body {
+    background: linear-gradient(45deg, #00853e, #50c878);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.content{
+    height: 400px;
+    width: 290px;
+    background-color: #242628;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+    font-family: 'Poppins',sans-serif;
+    margin: 0 25px;
+}
+.cart-img{
+    width: 120px;
+    height: 120px;
+    border: solid 4px var(--primaryColor);
+    border-radius: 100rem;
+    transform: translateY(25px);
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+    transition: .17s;
+}
+
+.heading{
+    margin-top: 35px;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+.title{
+    font-size: 18px;
+    color: var(--primaryColor);
+}
+.contact-items{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 30px 45px;
+}
+.contact-items i{
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button{
+    padding: 13px 25px;
+    font-size: 14px;
+    font-family: 'Poppins',sans-serif;
+    color: white;
+    background-color: #242628;
+    border-radius: 10px;
+    border: 1px solid var(--primaryColor);
+    line-height: 1;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover{
+    background-color: var(--primaryColor);
+}
+.contact-items i:hover{
+    color: var(--primaryColor);
+}
+.cart-img:hover{
+    width: 100%;
+    height: 100%;
+    border: unset;
+    border-radius: unset;
+    transform: none;
+}
