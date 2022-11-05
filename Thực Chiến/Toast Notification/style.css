@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --success: rgb(0, 128, 0);
+    --warning: rgb(255, 165, 0);
+    --error: rgb(255, 0, 0);
+
+    --success-light: rgba(0, 128, 0, 0.4);
+    --warning-light: rgba(255, 165, 0, 0.4);
+    --error-light: rgba(255, 0, 0, 0.4);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.control button{
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: white;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.success{
+    background-color: var(--success);
+}
+.warning{
+    background-color: var(--warning);
+}
+.error{
+    background-color: var(--error);
+}
+
+#toasts{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+.toasts{
+    margin-bottom: 10px;
+}
+.toasts.success{
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 18px;
+    border-left: 6px solid var(--success);
+    overflow: hidden;
+    animation: slide_show 2s forwards;
+}
+.toasts.warning{
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 18px;
+    border-left: 6px solid var(--warning);
+    overflow: hidden;
+    animation: slide_show 2s forwards;
+}
+.toasts.error{
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 18px;
+    border-left: 6px solid var(--error);
+    overflow: hidden;
+    animation: slide_show 2s forwards;
+}
+.toasts i{
+    margin: 0 10px;
+}
+.toasts.success .coutdown{
+    background: var(--success);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    z-index: 0;
+}
+.toasts.warning .coutdown{
+    background: var(--warning);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    z-index: 0;
+}
+.toasts.error .coutdown{
+    background: var(--error);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    z-index: 0;
+}
+.toasts.success{
+    background: var(--success-light); 
+}
+.toasts.warning{
+    background: var(--warning-light); 
+}
+.toasts.error{
+    background: var(--error-light); 
+}
+
+@keyframes coutdown{
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: 0%;
+    }
+}
+@keyframes slide_show{
+    0%{
+        transform: translateX(100%);
+    }
+    25%{
+        transform: translateX(-10%);
+    }
+    50%{
+        transform: translateX(0%);
+
+    }
+    100%{
+        transform: translateX(-10%);
+
+    }
+}
+
+@keyframes slide_hide{
+    0%{
+        transform: translateX(-10%);
+    }
+    25%{
+        transform: translateX(0%);
+    }
+    50%{
+        transform: translateX(-10%);
+
+    }
+    100%{
+        transform: translateX(150%);
+
+    }
+}
