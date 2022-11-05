@@ -2,7 +2,8 @@ const username = document.querySelector('#username')
 const id = document.querySelector('#id')
 const password = document.querySelector('#password')
 const confirmPassword = document.querySelector('#password2')
-
+const eyeShowPass = document.querySelector('.icon')
+const iconConfirm = document.querySelector('.iconConfirm')
 const form = document.querySelector('form')
 
 function showError(input, message){
@@ -67,12 +68,36 @@ function checkLengthError(input,min,max){
 function checkPasswordMatch(passwordInput, confirmPassword){
     if(passwordInput.value !== confirmPassword.value){
         showError(confirmPassword, 'khong trung pass')
-    }else {
-        showSuccess(confirmPassword)
-
+        return true
     }
+    return false
 
 }
+
+eyeShowPass.addEventListener('click',function(){
+    const currentType = '';
+    if(password.getAttribute('type') === 'password'){
+        password.setAttribute('type','text')
+        eyeShowPass.className = 'fa-solid fa-eye-slash icon';
+        
+    }else{
+        password.setAttribute('type','password')
+        eyeShowPass.className = 'fa-solid fa-eye icon';
+    }
+})
+
+iconConfirm.addEventListener('click',function(){
+    const currentType = '';
+    if(confirmPassword.getAttribute('type') === 'password'){
+        confirmPassword.setAttribute('type','text')
+        iconConfirm.className = 'fa-solid fa-eye-slash icon';
+        
+    }else{
+        confirmPassword.setAttribute('type','password')
+        iconConfirm.className = 'fa-solid fa-eye icon';
+    }
+})
+
 
 form.addEventListener('click',function(e){
     e.preventDefault()

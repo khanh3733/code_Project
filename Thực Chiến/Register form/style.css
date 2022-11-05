@@ -113,3 +113,18 @@ input[type='submit']:hover {
 .signup_link a:hover {
 	text-decoration: underline;
 }
+
+.form-control.pass{
+	display: flex;
+	align-items: center;
+}
+.form-control i{
+	cursor: pointer;
+}
+.icon.iconHide{
+	display: none;
+}
+.icon.iconShow{
+	display: block;
+}
+
