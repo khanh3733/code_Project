@@ -13,8 +13,8 @@ body{
     background: linear-gradient(to top, rgba(0,0,0,0.7),rgba(0,0,0,0.8)), url(./cold.png) no-repeat center/cover;
 }
 
-#wheather{
-    width: 350px;
+#weather{
+    width: 400px;
     border-radius: 15px;
     padding: 30px 20px;
     background: url(cold.png) no-repeat center/cover;
@@ -39,20 +39,23 @@ body{
     text-align: center;
     color: white;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+    transition: .4s ease;
 }
 .time{
-    margin: 15px 0 20px 0;
+    margin: 5px 0 20px 0;
     font-size: 15px;
 }
 .temperature{
     font-size: 65px;
+    width: 250px;
+    font-weight: bold;
     background: rgba(255, 255, 255, 0.4);
     text-shadow: 4px 4px rgba(0, 0, 0, 0.7);
     box-shadow: 4px 4px rgba(0,0,0,0.5);
     border: none;
     border-radius: 10px;
-    margin: 0 30px;
-    padding: 20px;
+    padding: 20px 0;
+    margin: 0 auto;
 }
 
 .sort-desc{
@@ -72,4 +75,8 @@ body{
 .more-desc{
     display: flex;
     justify-content: space-between;
+}
+.hide{
+    visibility: hidden;
+    opacity: 0;
 }
